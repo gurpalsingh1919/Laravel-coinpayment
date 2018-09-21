@@ -1,12 +1,12 @@
-# README #
+# Laravel Coinpayments and paypal with 2FA authentication tool #
 
 This README would normally document whatever steps are necessary to get your application up and running.
 
-### What is this repository for? ###
+### Crypto currency buy dashboard  ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Laravel 5.4
+* CoinPayments 1.0
+* [Learn coinnpayment](https://CoinPayments.net)
 
 ### How do I get set up? ###
 
