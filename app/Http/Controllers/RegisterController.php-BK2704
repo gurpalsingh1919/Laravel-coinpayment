@@ -1,0 +1,89 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Mail;
+use Sentinel;
+use Activation;
+use App\User;
+use Form;
+
+class RegisterController extends Controller
+{
+
+    public function register()
+    {
+        return view('auth.register');
+    }
+
+    public function referral(Request $request, $ref)
+    {
+        $request->session()->put('referral', $ref);
+        return redirect('register');
+    }
+
+
+    public function registerPost(Request $request)
+    {
+        $this->validate($request,[
+            'email'=>'required|email|unique:users,email',
+            'first_name'=>'required',
+            'last_name'=>'required',
+            //'username'=>'required|max:255|unique:users,username',
+            'password' =>'required|min:8',
+            'password1' =>'required|min:8|same:password',
+            'sponser' =>'nullable|email',
+        ]);
+        if ($request->sponser) {
+            $sponser = User::where('email', $request->sponser)->first();
+            if (is_null($sponser)) {
+                return redirect()->back()->with(['error' => "Please enter Valid Sponser Email !", 'validator' => '1']);
+            }
+        }
+        $username=$request->first_name.' '.$request->last_name;
+        $user =  Sentinel::register(array(
+            'fullname'     =>$username,
+            'username'     =>$username,
+            'email'        => $request->email,
+            'password'     => $request->password1,
+        ));
+       $user->fullname = $username;
+        $user->username = $username;
+        $user->save();
+        
+
+        $parent_id=0;
+        $activation = Activation::create($user);
+        $role = Sentinel::findRoleBySlug('user');
+        $role->users()->attach($user);
+
+        if($request->sponser)
+        {
+            $sponser_data = User::where('email', $request->sponser)->first();
+            if($sponser_data) {
+                $parent_id = $sponser_data->id;
+                User::where('email', $request->email)->update(array('parent_id' => $parent_id, 'username' => $request->first_name.' '.$request->last_name, 'fullname' => $request->first_name.' '.$request->last_name));
+                $userdata = User::where('username', $request->first_name.' '.$request->last_name)->get();
+            }
+        }
+
+        $link = url('').'/activate/'.$request->email.'/'.$activation->code;
+        $text = 'Welcome; please confirm your email address to complete your account registration.';
+        $this->sendActivationEmail($user,$text,$link);
+
+        return redirect('login')->with('success','Please check the email address that you have registered with to complete your registration.');
+    }
+
+    // User Activation Mail Function
+    private function sendActivationEmail($user,$text,$link){
+        Mail::send('emails.activation',[
+            'user' => $user,
+            'text' => $text,
+            'link' => $link,
+        ],function($message) use ($user, $text) {
+            $message->to($user->email);
+            $message->subject("Hello $user->username, $text");
+        });
+    }
+}

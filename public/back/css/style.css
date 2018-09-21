@@ -1,0 +1,39 @@
+body,html{
+  min-height: 100%
+}
+
+ul,li{
+  margin:0;
+  padding:0; 
+  list-style:none;
+}
+.center-h {
+    position: absolute;
+    width: 95%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    max-width: 1170px;
+}
+.inner-bg{
+  background:#fff;
+  -webkit-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+  -moz-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+  box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+  border-radius: 0.25rem;
+  width:100%;
+  padding:30px 15px; 
+}
+.balance-main > div:nth-child(odd) .inner-bg{
+  border-bottom: 3px solid #004991
+}
+.balance-main > div:nth-child(even) .inner-bg{
+ border-bottom: 3px solid #a0ce4e
+}
+.balance-main .inner-bg h4{
+font-weight: 600;
+text-transform: uppercase;
+}
+.balance-main .inner-bg p{
+  margin-bottom: 0
+}

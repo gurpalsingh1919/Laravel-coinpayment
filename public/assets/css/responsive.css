@@ -1,0 +1,777 @@
+@media screen and (max-width: 1450px) and (min-width: 1199px) {
+    .home:before {
+        height: 320%;
+    }
+    .digital-cash .m-100 {
+        margin: 50px;
+    }
+    .digital-cash h3 {
+        font-size: 21px
+    }
+    h1 {
+        margin-top: 40px;
+        font-size: 50px;
+        margin-bottom: 0px;
+    }
+    .rating-info {
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .home h3 {
+        padding: 8px 40px;
+        margin-top: 20px;
+        margin-bottom: -10px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .home {
+        height: auto;
+    }
+    .home-content-img img {
+        width: 370px;
+        margin-left: 122px;
+    }
+    .home:before {
+        height: 400%;
+    }
+    .title-shadow {
+        font-size: 40px;
+    }
+    .about-us {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .service-block img {
+        height: 60px;
+    }
+    .navbar-brand img {
+        height: 35px;
+    }
+    .digital-cash .m-100 {
+        margin: 30px 20px;
+    }
+    .digital-cash h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        line-height: 1.4;
+    }
+    .post-date {
+        padding-left: 15px;
+    }
+    .title {
+        font-size: 35px;
+    }
+    .post-slide .post-title>a {
+        font-size: 18px;
+    }
+    .post-slide .post-title {
+        padding: 0 15px;
+        margin-bottom: 0;
+    }
+    .post-slide .post-description {
+        padding: 0 15px;
+        margin: 2px 0 10px;
+    }
+    .ecosysytem-block {
+        height: 220px;
+    }
+    .ecosysytem-block {
+        margin-top: 25px;
+    }
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .post-bar {
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 991px) {}
+
+@media only screen and (max-width: 991px) {
+    .what-is-left {
+        margin-bottom: 30px;
+    }
+    .program .mtb-100 {
+        margin-bottom: 0;
+        margin-top: 50px;
+    }
+    .lending-sec {
+        margin-bottom: 50px;
+    }
+    .home:after {
+        width: 160%;
+    }
+    .header-social {
+        text-align: center;
+
+    margin-top: 20px;
+  }
+  .header-contact{
+    text-align: center;
+  }
+  .theme-modal .modal-lg {
+    max-width: 570px;
+}
+ .theme-modal.modal .modal-content {
+    padding: 20px;
+}
+  .modal .modal-content {
+    padding: 10px;
+  }
+  .theme-modal .modal-body{
+    padding-bottom: 0;
+  }
+  .navbar-nav{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    background-color: #1da86c;
+  }
+  .navbar-nav li.active{
+    margin-right: 0;
+    background-color: #2bb673;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: #f3f3f3;
+  }
+  .navbar-collapse .btn-outline{
+    float: right;
+  }
+  .home-content-img,.round-animate{
+    display: none;
+  }
+  h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 12px 10px;
+  }
+  .home h3{
+    font-size: 17px;
+    margin-bottom: 0;
+  }
+  .mt-5, .my-5 {
+    margin-top: 25px !important;
+  }
+  .card-body {
+    padding: 15px;
+  }
+  .home:before {
+    height: 450%;
+  }
+  .what-is-left{
+    order: 1;
+  }
+  .what-right{
+    order: 0;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .what-is p{
+   text-align: center;
+ }
+ .what-is .title:before {
+  right: 0;
+}
+.title-shadow {
+  left: 0;
+  right: 0;
+}
+.about-us {
+  background-blend-mode: overlay;
+  background-color: #ffffffd1;
+  border-bottom: 1px solid #f7f5f5;
+  border-top: 1px solid #f7f5f5;
+}
+.faq-wrapper{
+  margin-bottom: 30px;
+}
+.digital-cash .btn-theme{
+  margin-bottom: 30px;
+}
+.digital-cash .row{
+  position: relative;
+}
+.abjust-par{
+  height: 280px;
+  overflow: hidden;
+}
+.digi-cash-abjust{
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  background-color: #ffffffc2;
+}
+.app-card .pull-right{
+  float: left;
+}
+.digital-cash h3{
+  color: #006699;
+}
+.ecosysytem-block{
+  height: auto;
+}
+.icon-holder img{
+  height: 35px;
+}
+.icon-holder ~ span {
+  font-size: 18px;
+  padding-top: 15px;
+}
+ul.social-links-list li {
+  height: 120px;
+}
+.footer-wrapper {
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+
+
+
+    .header-contact {
+        text-align: center;
+    }
+    .theme-modal .modal-lg {
+        max-width: 570px;
+    }
+    .theme-modal.modal .modal-content {
+        padding: 20px;
+    }
+    .modal .modal-content {
+        padding: 10px;
+    }
+    .theme-modal .modal-body {
+        padding-bottom: 0;
+    }
+    .navbar-nav {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: right;
+        background-color: #1da86c;
+    }
+    .navbar-nav li.active {
+        margin-right: 0;
+        background-color: #2bb673;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: #f3f3f3;
+    }
+    .navbar-collapse .btn-outline {
+        float: right;
+    }
+    .home-content-img,
+    .round-animate {
+        display: none;
+    }
+    h1 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 12px 10px;
+    }
+    .home h3 {
+        font-size: 17px;
+        margin-bottom: 0;
+    }
+    .mt-5,
+    .my-5 {
+        margin-top: 25px !important;
+    }
+    .card-body {
+        padding: 15px;
+    }
+    .home:before {
+        height: 450%;
+    }
+    .what-is-left {
+        order: 1;
+    }
+    .what-right {
+        order: 0;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    .what-is p {
+        text-align: center;
+    }
+    .what-is .title:before {
+        right: 0;
+    }
+    .title-shadow {
+        left: 0;
+        right: 0;
+    }
+    .about-us {
+        background-blend-mode: overlay;
+        background-color: #ffffffd1;
+        border-bottom: 1px solid #f7f5f5;
+        border-top: 1px solid #f7f5f5;
+    }
+    .faq-wrapper {
+        margin-bottom: 30px;
+    }
+    .digital-cash .btn-theme {
+        margin-bottom: 30px;
+    }
+    .digital-cash .row {
+        position: relative;
+    }
+    .abjust-par {
+        height: 280px;
+        overflow: hidden;
+    }
+    .digi-cash-abjust {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 9;
+        background-color: #ffffffc2;
+    }
+    .app-card .pull-right {
+        float: left;
+    }
+    .digital-cash h3 {
+        color: #006699;
+    }
+    .ecosysytem-block {
+        height: auto;
+    }
+    .icon-holder img {
+        height: 35px;
+    }
+    .icon-holder~span {
+        font-size: 18px;
+        padding-top: 15px;
+    }
+    ul.social-links-list li {
+        height: 120px;
+    }
+    .footer-wrapper {
+        padding-top: 40px;
+        padding-bottom: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .title {
+        font-size: 30px;
+    }
+    .ecosysytem-block {
+        padding: 15px;
+    }
+    ul.social-links-list li {
+        width: 50%;
+    }
+
+    .second-lending {
+        transform: scale(1);
+    }
+    .tab-2.nav-pills .nav-link {
+        font-size: 15px;
+        padding: 7px 10px;
+    }
+    .ecosystem-details {
+        padding-left: 0;
+    }
+    .ecosysytem-block img {
+        left: inherit;
+        position: relative;
+    }
+    .ecosysytem-block {
+        text-align: center;
+    }
+    .ecosysytem-block h3 {
+        margin-top: 10px;
+    }
+}
+
+
+
+@media (max-height: 880px) {
+    h1 {
+        margin-top: 30px;
+        font-size: 40px;
+        margin-bottom: 0px;
+    }
+    .rating-info {
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .home h3 {
+        padding: 5px 40px;
+        margin-top: 15px;
+        margin-bottom: -20px;
+        font-size: 17px;
+    }
+    .icon-timer {
+        margin-top: 20px !important;
+    }
+    .home-contain .card-footer p {
+        margin: 0;
+        font-size: 15px;
+    }
+    .discount {
+        height: 38px;
+        width: 38px;
+    }
+    .icon-timer .card-body {
+        padding: 5px;
+    }
+    .header-bottom {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .lending-sec {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* media */
+@media only screen and (max-width: 768px) {
+    .desktop-control{
+        display: none;
+    }
+    .mobile-control{
+        display: block;
+    }
+    .ico-info .features-graph .btn-with-icon{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .ico-info .features-graph .icon-features-1:after {
+        content: ' ';
+        background-image: none;
+        background-size: 100%;
+        height: 110px;
+        width: 85px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 36.4%;
+    }
+    .ico-info .features-graph .icon-features-2:after {
+        content: ' ';
+        background-image: none;
+        background-size: 100%;
+        height: 110px;
+        width: 85px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 36.4%;
+    }
+    .ico-info .features-graph .icon-features-3:after {
+        content: ' ';
+        background-image: none;
+        background-size: 100%;
+        height: 110px;
+        width: 85px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 36.4%;
+    }
+    .ico-info .features-graph .icon-features-4:after {
+        content: ' ';
+        background-image: none;
+        background-size: 100%;
+        height: 110px;
+        width: 85px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 36.4%;
+    }
+    .ico-info .features-graph .icon-features-6:after {
+        content: ' ';
+        background-image: none;
+        background-size: 100%;
+        height: 110px;
+        width: 85px;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 36.4%;
+    }
+    .ico-info .features-graph .sq-bt-label {
+        letter-spacing: 0;
+        color: #656b6f;
+        font-size: 7px;
+        font-weight: 600;
+        line-height: 16px;
+        position: absolute;
+        text-transform: uppercase;
+        display: none;
+    }
+    .ico-info .features-content {
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: inline;
+        align-items: center;
+        padding-bottom: 5em;
+    }
+    .ico-info .features-graph {
+        height: auto;
+        margin: 25px;
+    }
+    .ico-info .features-content-col {
+        width: 100%;
+        text-align: left;
+    }
+}
+/*how its work end*/
+
+
+@media only screen and (max-width: 767px){
+  .title {
+    font-size: 30px;
+  }
+  .ecosysytem-block {
+    padding: 15px;
+}
+ul.social-links-list li{
+    width: 50% ;
+}
+
+.second-lending {
+    transform: scale(1);
+}
+  .tab-2.nav-pills .nav-link {
+    font-size: 15px;
+    padding: 7px 10px;
+  }
+  .ecosystem-details {
+    padding-left: 0;
+  }
+  .ecosysytem-block img {
+    left: inherit;
+    position: relative;
+  }
+  .ecosysytem-block{
+    text-align: center;
+  }
+  .ecosysytem-block h3{
+    margin-top: 10px; 
+  }
+  .lending-sec .lending-sec-header:before{
+    height: 300%;
+    top: -267%;
+  }
+  .d-flex-center {
+    justify-content: center;
+}
+.invest-tab .invest-list > li > img{
+  position: relative;
+}
+.invest-details{
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+  .lending-sec .lending-sec-header:after{
+    height: 270%;
+    top: -106%;
+  }
+  .lending-sec .title{ text-align: center; }
+  
+	
+   	  ul.investment-service:before, ul.investment-service:after {
+            display: none;
+        }
+
+        ul.investment-service li, ul.investment-service {
+            position: relative;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            top: 0 !important;
+        }
+
+        ul.investment-service li {
+            display: inline-block;
+            width: auto;
+            margin: 30px;
+        }
+
+        .opportunity-wrapper {
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+
+        ul.investment-service {
+            width: auto;
+            height: auto;
+			text-align: center;
+			margin: 0px auto
+        }
+		.work-cont {
+			opacity:1;
+		}
+		ul.investment-service li:nth-child(1) .work-cont {
+			background-color: #e0e0e000;
+			position: relative;
+			top: 40px;
+			left: -53px;
+			opacity: 1;
+		}
+		ul.investment-service li:nth-child(1) {
+			margin: 15px auto;
+			width: 100%;
+			text-align: center;
+		}
+		ul.investment-service li:nth-child(2) {
+			margin: 60px auto 0;
+			text-align: center;
+			
+		}
+		ul.investment-service li:nth-child(3) {
+			margin: 0 auto;
+			width: 100%;
+			text-align: center;
+		}
+		ul.investment-service li:nth-child(4) {
+			width: 100%;
+			text-align: center;
+			margin-left: auto;
+			margin-top: 250px;
+		}
+		ul.investment-service li:nth-child(5) {
+			margin: -30px auto 0;
+			width: 100%;
+			text-align: center;
+		}
+		ul.investment-service li:nth-child(5) .work-cont {
+			background-color: #e6e6e600;
+			position: relative;
+			top: 15px;
+			left: -77px;
+			height: 0px;
+			margin: 0 auto;
+		}
+		ul.investment-service li:nth-child(6) {
+			display:none;
+		}
+		.rounded-circle{
+			border-radius: 0 !important;
+		}
+		.how-w-circle{
+			border: 1px solid #213061;
+			position: relative;
+			text-align: center;
+			margin: 0 auto;
+		}
+		.how-w-circle:hover {
+			box-shadow: 0px 0px 27px #1f365c52;
+			border: 1px solid #213061;			
+			transition: all 0.4s;
+		}
+}
+
+
+@media only screen and (max-width: 600px){
+  .modal-backdrop.fade.show,.theme-modal.modal{
+    display: none !important;
+  }
+  .modal-open {
+        overflow-x: hidden;
+    overflow-y: scroll;
+}
+ul.social-links-list li {
+    width: 50%;
+}
+.social-links-list{
+  text-align: center;
+}
+.footer-menu li a{
+  line-height: 2
+}
+}
+
+/*how its work*/
+
+
+@media only screen and (max-width: 480px){
+  .lending-sec .lending-sec-header:after{ top: -146%; }
+}
+@media only screen and (max-width: 479px){
+  .lending-sec .lending-sec-header:before{
+    height: 200%;
+    top: -120%;
+    left: -20%;
+  }
+}
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .modal-backdrop.fade.show,
+    .theme-modal.modal {
+        display: none !important;
+    }
+    .modal-open {
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    ul.social-links-list li {
+        width: 50%;
+    }
+    .social-links-list {
+        text-align: center;
+    }
+    .footer-menu li a {
+        line-height: 2
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .lending-sec .lending-sec-header:before {
+        height: 300%;
+        top: -267%;
+    }
+    .d-flex-center {
+        justify-content: center;
+    }
+    .invest-tab .invest-list>li>img {
+        position: relative;
+    }
+    .invest-details {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+    .lending-sec .lending-sec-header:after {
+        height: 270%;
+        top: -106%;
+    }
+    .lending-sec .title {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .lending-sec .lending-sec-header:after {
+        top: -146%;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .lending-sec .lending-sec-header:before {
+        height: 200%;
+        top: -120%;
+        left: -20%;
+    }
+}
+

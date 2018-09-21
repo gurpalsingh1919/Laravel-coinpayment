@@ -1,0 +1,207 @@
+@media (max-width: 1366px) {
+/*.form-bg{
+    height: auto !important;
+}*/
+.home{
+    height: auto;
+    padding-bottom: 30px;
+}
+.login-new-bg{
+    height: 100vh;
+}
+.rg-form-bg{
+    height: auto;
+}
+}
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px){
+	.nice-nav {
+	top: 102px;
+}
+}
+
+@media only screen and (max-width: 767px){
+.home{
+    height: calc(100vh - -380px);
+    padding-bottom: 0px;
+}
+.main-theme-font{
+    font-size: 20px;
+}
+.main-sub-f{
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 14px !important;
+}
+.legend li {
+    width: auto;
+}
+.pie{
+    margin: 0 0px 30px 0;
+}
+.header-bottom {
+    background:white;
+}
+.dashboard-sidebar {
+    float: right !important;
+}
+ul.social-links-list li{
+    width: 50% ;
+}
+.footer-menu{
+    padding:0;
+}
+.dashboard-curruncy {
+    text-align: center !important;
+}
+.dashboard-header .rating-info {
+    padding: 0;
+}
+.dashboard-header .rating-info li {
+    padding-left: 0px !important;
+}
+.nice-nav {
+	top: 103px;
+}
+.dashboard-body {
+	padding: 15px;
+}
+.dashboard-wrapper {
+    margin-top: 101px;
+}
+.timer-wrapper p>span {
+        font-size: 17px !important; 
+        padding: 0px !important;
+}
+
+      ul.investment-service:before, ul.investment-service:after {
+            display: none;
+        }
+
+        ul.investment-service li, ul.investment-service {
+            position: relative;
+            left: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            top: 0 !important;
+        }
+
+        ul.investment-service li {
+            display: inline-block;
+            width: auto;
+            margin: 30px;
+        }
+
+        .opportunity-wrapper {
+            margin-top: 0px;
+            margin-bottom: 0;
+        }
+
+        ul.investment-service {
+            width: auto;
+            height: auto;
+            text-align: center;
+            margin: 0px auto
+        }
+        .work-cont {
+            opacity:1;
+            left: 0 !important;
+        }
+        .how-w-circle {
+            width: 100%;   
+        }
+        .work-cont p {
+   
+    color: #28396f;
+    animation: scaleDisappear 0.3s;
+    width: 100% !important;
+   
+    text-align: left !important;
+    
+}
+        ul.investment-service li:nth-child(1) .work-cont {
+                background-color: #e0e0e000;
+    position: relative;
+    top: 50px;
+    left: 0;
+    opacity: 1;
+    margin: auto 0;
+    width: 100%;
+        }
+        ul.investment-service li:nth-child(1) {
+            margin: 15px auto;
+            width: 100%;
+            text-align: center;
+        }
+        ul.investment-service li:nth-child(2) {
+            margin: 60px auto 0;
+            text-align: center;
+            
+        }
+        ul.investment-service li:nth-child(3) {
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+        }
+        ul.investment-service li:nth-child(4) {
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-top: 250px;
+        }
+        ul.investment-service li:nth-child(5) {
+            margin: -30px auto 0;
+            width: 100%;
+            text-align: center;
+        }
+        ul.investment-service li:nth-child(5) .work-cont {
+            background-color: #e6e6e600;
+            position: relative;
+            top: 40px;
+            left: -77px;
+            height: 0px;
+            margin: 0 auto;
+        }
+        ul.investment-service li:nth-child(6) {
+            display:none;
+        }
+        .rounded-circle{
+            border-radius: 0 !important;
+        }
+        .how-w-circle{
+            border: 1px solid #213061;
+            position: relative;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .how-w-circle:hover {
+            box-shadow: 0px 0px 27px #1f365c52;
+            border: 1px solid #213061;          
+            transition: all 0.4s;
+        }
+        .progress-total-coin {
+           font-size: 10px !important;
+            
+}
+.progress-total-text {
+    font-size: 9px !important;
+    }
+}
+
+@media (max-width: 575px) {
+
+
+}
+
+@media only screen and (max-width: 448px){
+.dashboard-wrapper {
+    margin-top: 172px;
+}
+.nice-nav {
+	top: 179px;
+}	
+}

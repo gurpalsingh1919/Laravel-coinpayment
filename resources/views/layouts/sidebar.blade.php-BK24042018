@@ -1,0 +1,280 @@
+
+
+    <div id="mySidenav" class="side-navbar">
+        <div class="logo text-center"><a href="#"><img src="{{ url('/') }}/back/images/4new-logo-white.png" /></a></div>
+        <div class="enable-auth text-center">
+        @if(Sentinel::getUser()->google2fa_enable)
+          <button id="otpDisableToggleButton"  class="btn btn-warning btn-sm">Disable 2FA</button>
+        @else
+          <button id="otpToggleButton" class="btn btn-primary btn-sm">Enable Two Factor auth</button>
+        @endif
+        </div>
+        <ul class="nav flex-column sidebar-nav">
+             <li class="{{{ Request::is('dashboard')?'active':'' }}}"><a href="{{ url('/dashboard') }}"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+
+                <?php if ($user = Sentinel::getUser()) {
+	if ($user->inRole('user')) {
+		?>
+
+            <!-- <li class="{{{ Request::is('user-profile')?'active':'' }}}"><a href="{{ url('user-profile') }}" ><i class="fal fa-user-circle"></i>Profile</a></li> -->
+
+            <li class="{{{ Request::is('wallet')?'active':'' }}}"><a href="{{ url('/wallet') }}"><i class="far fa-shopping-basket"></i>Wallets</a></li>
+
+           <!--  <li class="{{{ Request::is('add-money')?'active':'' }}}"><a href="{{ url('/add-money') }}"><i class="far fa-shopping-basket"></i>USD Wallet</a></li> -->
+           <style type="text/css">
+               .kwatt{
+                background-image:url("{{ asset('/back/images/menu_icon1.png') }}");
+                background-repeat: no-repeat;
+                background-position: 19px 16px;
+                padding-left: 10px;
+               }
+               .kwatt.active,
+           .kwatt:hover{
+            background-image:url("{{ asset('/back/images/menu_icon.png') }}");
+           }
+           </style>
+
+           <li class="kwatt {{{ Request::is('buy-coin')?'active':'' }}}"><a href="{{ url('/buy-coin') }}"><i class="kwatt"></i>Buy KWATTs</a></li>
+
+             <?php $ico_link = in_array(Request::path(), ['buy-coin', 'transfer', 'ico-info']);?>
+
+
+           <!--  <li class="submenu"> <a href="#" class="{{$ico_link==1?'nav-link dropdown-toggle collapsed':'nav-link dropdown-toggle'}}" href="#submenu1sub1" data-toggle="collapse" aria-expanded="{{$ico_link==1?'true':'false'}}" data-target="#submenu1sub1"><i class="fas fa-cogs"></i>Buy KWATTs</a>
+                <div class="collapse submenu-inner {{$ico_link==1?'show':''}} " id="submenu1sub1" aria-expanded="{{$ico_link==1?'true':'false'}}">
+                    <ul class="flex-column nav pl-5 p-2">
+                        <li class="{{{ Request::is('buy-coin')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('buy-coin') }}">
+                                  <i class="fas fa-credit-card"></i> Buy KWATT Token
+                            </a>
+                        </li>
+                        <li class="{{{ Request::is('transfer')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('transfer') }}">
+                                <i class="fas fa-shopping-basket"></i> Transfer KWATT Token
+                            </a>
+                        </li>
+                        <li class="{{{ Request::is('ico-info')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('ico-info') }}">
+                                <i class="fas fa-shopping-basket"></i> ICO Information
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+             -->
+
+            <?php $wallet_link = in_array(Request::path(), ['buy-coin-list', 'deposit-list', 'withdraw-list', 'transfer-list']);
+		// echo "<pre>";print_r(Request::path());die;
+		?>
+
+            <li class="{{{ Request::is('buy-coin-list')?'active':'' }}} nav-item ">
+                <a href="{{ url('buy-coin-list') }}" class="{{$wallet_link==1?'nav-link':'nav-link'}}"><i class="fas fa-cart-plus"></i>Transactions</a>
+
+                <div class="d-none collapse submenu-inner {{$wallet_link==1?'show':''}}" id="submenu1sub2" aria-expanded="{{$wallet_link==1?'true':'false'}}">
+                    <ul class="flex-column nav pl-5 p-2">
+                        <li class="{{{ Request::is('buy-coin-list')?'active':'' }}} nav-item ">
+                            <a class="nav-link p-2" href="{{ url('buy-coin-list') }}">
+                                  <i class="fas fa-credit-card"></i> Buy Token
+                            </a>
+                        </li>
+                        <li class="{{{ Request::is('deposit-list')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('deposit-list') }}">
+                                <i class="fas fa-shopping-basket"></i> Deposit
+                            </a>
+                        </li>
+                       <!--  <li class="{{{ Request::is('withdraw-list')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('withdraw-list') }}">
+                                <i class="fas fa-credit-card"></i> Withdrawal
+                            </a>
+                        </li> -->
+                       <!--  <li class="{{{ Request::is('transfer-list')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('transfer-list') }}">
+                                <i class="fa fa-fw fa-compass"></i> Transfer
+                            </a>
+                        </li> -->
+                          </ul>
+                </div>
+            </li>
+            <!--- - - - - - - - - - - - - User referal - - - - - - - - - - - - - - - - -->
+            <li class="{{{ Request::is('user-referral')?'active':'' }}}"><a href="user-referral"><i class="fas fa-user-plus"></i>Referrals</a></li>
+            <!--- - - - - - - - - - - - - Social Bounty - - - - - - - - - - - - - - - - -->
+            <!--  <li class="{{{ Request::is('bounty')?'active':'' }}}"><a href="{{ url('bounty') }}"><i class="far fa-tachometer-alt"></i>Social Bounty</a></li> -->
+             <!--- - - - - - - - - - - - - Settings - - - - - - - - - - - - - - - - -->
+             <?php $setting_link = in_array(Request::path(), ['user-profile', 'kyc', 'login-history', 'transfer-list']);?>
+
+             <li class="{{{ Request::is('user-profile')?'active':'' }}} nav-item ">
+                <a class="{{$setting_link==1?'nav-link':'nav-link'}}" href="{{ url('user-profile') }}"><i class="fas fa-cog"></i>Settings</a>
+
+                <div class="d-none collapse submenu-inner {{$setting_link==1?'show':''}}" id="submenu1sub3" aria-expanded="{{$setting_link==1?'true':'false'}}">
+                    <ul class="flex-column nav pl-5 p-2 ">
+                        <li class="{{{ Request::is('user-profile')?'active':'' }}} nav-item ">
+                            <a class="nav-link p-2" href="{{ url('user-profile') }}">
+                                  <i class="fas fa-credit-card"></i> Your Profile
+                            </a>
+                        </li>
+                        <li class="{{{ Request::is('kyc')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('kyc') }}">
+                                <i class="fas fa-shopping-basket"></i> KYC
+                            </a>
+                        </li>
+                         <li class="{{{ Request::is('login-history')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('login-history') }}">
+                                <i class="fas fa-credit-card"></i> Login History
+                            </a>
+                        </li>
+                        <li class="{{{ Request::is('contact-support')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="#">
+                                <i class="fa fa-fw fa-compass"></i> Contact Support
+                            </a>
+                        </li>
+                        <li class="{{{ Request::is('invite-friends')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="#">
+                                <i class="fa fa-fw fa-compass"></i> Invite friends
+                            </a>
+                        </li>
+                        <li class="{{{ Request::is('transfer-list')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="fa fa-fw fa-compass"></i> Sign Out
+                            </a>
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST">
+                                  {{ csrf_field() }}
+                                </form>
+                        </li>
+
+
+
+
+                          </ul>
+                </div>
+            </li>
+            <!-- <li class="{{{ Request::is('login-history')?'active':'' }}}"><a href="{{url('login-history')}}"><i class="far fa-sign-in-alt"></i>Login History</a></li>
+
+            <li class="{{{ Request::is('kyc')?'active':'' }}}"><a href="{{url('kyc')}}"><i class="fab fa-wpforms"></i>Kyc Form</a></li> -->
+
+                           <?php } else if ($user->inRole('admin')) {?>
+
+                              <li class="{{{ Request::is('profile')?'active':'' }}}"><a href="{{ url('/profile') }}"><i class="fal fa-user-circle"></i>Profile</a></li>
+                                <li class="{{{ Request::is('admin-user-list')?'active':'' }}}"><a href="{{url('admin-user-list')}}"><i class="fa fa-user"></i>User</a></li>
+                                <li class="{{{ Request::is('admin-withdraw')?'active':'' }}}"><a href="{{ url('admin-withdraw') }}"><i class="fas fa-money-bill-alt"></i>Withdrawal Request</a></li>
+                                {{--<li class="{{{ Request::is('user_kyc_list.html')?'active':'' }}}"><a href="user_kyc_list.html"><i class="fab fa-wpforms"></i>User Kyc List</a></li>--}}
+
+            <?php $transaction_link = in_array(Request::path(), ['admin-buy', 'admin-deposit', 'admin-withdraw', 'admin-transfer']);?>
+
+                                <li class="submenu">
+                                    <a href="#" class="{{$transaction_link==1?'nav-link dropdown-toggle collapsed':'nav-link dropdown-toggle'}}" href="#submenu1sub1" data-toggle="collapse" aria-expanded="{{$transaction_link==1?'true':'false'}}" data-target="#submenu1sub1"><i class="fas fa-cart-plus"></i>Transaction</a>
+                                    <div class="collapse submenu-inner {{$transaction_link==1?'show':''}}" id="submenu1sub1" aria-expanded="{{$transaction_link==1?'true':'false'}}">
+                                        <ul class="flex-column nav pl-5 p-2">
+                                            <li class="nav-item {{{ Request::is('admin-buy')?'active':'' }}}"> <a class="nav-link p-2" href="{{ url('admin-buy') }}"> <i class="fas fa-credit-card"></i> Buy Token  </a> </li>
+                                            <li class="nav-item {{{ Request::is('admin-deposit')?'active':'' }}}"><a class="nav-link p-2" href="{{ url('admin-deposit') }}"><i class="fas fa-shopping-basket"></i> Deposite </a> </li>
+                                            <li class="nav-item {{{ Request::is('admin-withdraw')?'active':'' }}}"> <a class="nav-link p-2" href="{{ url('admin-withdraw') }}"> <i class="fas fa-credit-card"></i> Withdrawal</a>  </li>
+                                            <li class="nav-item {{{ Request::is('admin-transfer')?'active':'' }}}"> <a class="nav-link p-2" href="{{ url('admin-transfer') }}"><i class="fa fa-fw fa-compass"></i> Transfer Token</a> </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="{{{ Request::is('ico_setting')?'active':'' }}}"><a href="{{ url('/ico_setting') }}"><i class="fas fa-cogs"></i>ICO Settings</a></li>
+                                <li class="{{{ Request::is('rate')?'active':'' }}}"><a href="{{ url('/rate') }}"><i class="fas fa-wrench"></i>Rates Settings</a></li>
+                                <li class="{{{ Request::is('admin-bounty')?'active':'' }}}"><a href="{{ url('admin-bounty') }}"><i class="fas fa-user"></i>User's Bounty</a></li>
+                                {{--<li class="{{{ Request::is('board_people.html')?'active':'' }}}"><a href="board_people.html"><i class="fas fa-users"></i>Board People</a></li>--}}
+
+                         <?php } else {?>
+
+                         <?php }}?>
+        </ul>
+    </div>
+    <!-- begin:: Page -->
+    <div class="page">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand hamburger-menu" id="toggle-btn" href="javascript:void(0);"><i class="fas fa-bars"></i></a>
+                <div class="d-none d-lg-block">
+                    <ul class="navbar-nav center-nav">
+                        <li>
+                            1Kwatt ≈ {{number_format($c_rate,2)}} USD |
+                            1BTC ≈ {{number_format($c_btc,2)}} USD |
+                            1ETH ≈{{number_format($c_eth,2)}} USD |
+                            1LTC ≈ {{number_format($c_ltc,2)}} USD |
+                            1BCH ≈ {{number_format($c_bch,2)}} USD
+                        </li>
+                    </ul>
+                </div>
+                <div class="justify-content-between">
+                    <div class="align-self-end navbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown open custom">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+
+                       <i class="fas fa-user green"></i>&nbsp;
+                        <strong>{{sentinel::getUser()->fullname}}</strong>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <div class="navbar-login pt-2 text-center">
+
+
+
+                                                    <p class="">
+                                                        <i class="fas fa-user green"></i>
+                                                    </p>
+
+
+                                                    <h3 class="text-center"><strong> {{sentinel::getUser()->fullname}}</strong></h3>
+                                                        <small> {{sentinel::getUser()->email}}</small>
+
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                     <li class="{{{ Request::is('user-profile')?'active':'' }}} nav-item ">
+                            <a class="nav-link p-2" href="{{ url('user-profile') }}">
+                                   <i class="fal fa-cog"></i> Setting
+                            </a>
+                        </li>
+                         <li class="{{{ Request::is('login-history')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('login-history') }}">
+                                 <i class="fal fa-history"></i> Login History
+                            </a>
+                        </li>
+                        <li class="{{{ Request::is('contact-support')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('contact-support') }}">
+                                <i class="fal fa-phone"></i> Contact Support
+                            </a>
+                        </li>
+                        <li class="{{{ Request::is('invite-friend')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('invite-friend') }}">
+                                <i class="fal fa-user-plus"></i> Invite friends
+                            </a>
+                        </li>
+                        <li class="{{{ Request::is('transfer-list')?'active':'' }}} nav-item">
+                            <a class="nav-link p-2" href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="fal fa-sign-out-alt"></i> Sign Out
+                            </a>
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST">
+                                  {{ csrf_field() }}
+                                </form>
+                        </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="nav divider-sept d-none">
+                            <!-- <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-user-plus"></i> User Referral</a></li> -->
+                            <li class="nav-item dropdown d-none">
+                                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hi, {{sentinel::getUser()->fullname}}</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    {{--<a class="dropdown-item" href="#">Action</a>--}}
+                                    {{--<a class="dropdown-item" href="#">Another action</a>--}}
+                                    {{--<a class="dropdown-item" href="#">Something else here</a>--}}
+                                    <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="dropdown-item">
+                                    Logout <i class="fa fa-sign-out pull-right" aria-hidden="true"></i>
+                                </a>
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST">
+                                  {{ csrf_field() }}
+                                </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+

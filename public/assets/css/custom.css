@@ -1,0 +1,333 @@
+body,html{
+  min-height: 100%
+}
+
+ul,li{
+  margin:0;
+  padding:0; 
+  list-style:none;
+}
+.center-h {
+    position: absolute;
+    width: 95%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    max-width: 1170px;
+}
+.card-header h4{
+  margin-bottom: 0
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    background:transparent;
+}
+.login-screen .left-login:after {
+    content: "";
+    width: 2px;
+    background: #ececec;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    top: 0;
+}
+.login-screen .left-login,
+.login-screen .right-login{
+  display: table-cell;
+  width: 50%;
+  vertical-align:middle;
+   padding: 9% 50px;
+   position: relative;
+}
+.login-screen .left-login img{
+margin-bottom: 30px;
+}
+.login-screen .right-login h3{  margin-bottom: 60px;}
+.newregister_container .login-screen .right-login h3{  margin-bottom:15px;}
+
+.login-screen .right-login h3 span{
+  font-size: 14px;
+  display: block;
+  padding: 10px 0 0
+}
+.middle-content{
+  padding: 30px 50px 0
+}
+/************** dashboard navigation *************/
+.page.active {
+    width:100%;
+}
+.side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+   padding:15px 0;
+    height: 100%;
+    width:300px;
+    text-align: left;
+    background: #334655;
+    z-index: 999;
+    overflow-y: auto;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transition: width 0.3s linear;
+    transition: width 0.3s linear;
+    width: calc(100% - 300px);
+    background-color: #F4F7FA;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+.side-navbar.shrink {
+    width: 0px;
+}
+.center-nav li{
+  margin-right: 20px;
+  text-align:center;
+}
+.center-nav li i{
+  font-size:20px; 
+  color: #A0CE4E;
+}
+/************** dashboard navigation *************/
+
+/******* subnavigation ************/
+
+.btn:hover small, .btn:focus small{
+  color: #fff !important
+}
+
+
+
+/****** dashboard ***********/
+.sidebar-nav li i{
+  margin-right: 15px;
+}
+.sidebar-nav li a{
+  color: #fff;
+  padding:15px 20px ;
+  display: block;
+}
+.sidebar-nav li.active a,
+.sidebar-nav li a:hover{
+  color:#7dc242;
+  text-decoration: none
+}
+.enable-auth{
+  background:#182631;
+  padding:20px 0;
+  margin: 20px 0
+}
+.navbar-brand.hamburger-menu{
+  font-size:25px;
+}
+.inner-bg{
+  background:#fff;
+  -webkit-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+  -moz-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+  box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+  border-radius: 0.25rem;
+  width:100%;
+  padding:30px 15px; 
+}
+.blue {
+    color: #004991;
+}
+.balance-main .inner-bg i{
+ font-size: 45px;
+ color:#A0CE4E;
+
+}
+.balance-main .inner-bg h4:first-child{
+  color: #888888;
+  font-weight: 300;
+
+}
+.balance-main .inner-bg h4{
+
+text-transform: uppercase;
+}
+.balance-main .inner-bg p{
+  margin-bottom: 0
+}
+.balance-main > div:nth-child(odd) .inner-bg{
+  border-bottom: 3px solid #004991
+}
+.balance-main > div:nth-child(even) .inner-bg{
+ border-bottom: 3px solid #a0ce4e
+}
+.divider-sept li a {
+    border-right: 1px solid #505050;
+    padding-top: 0;
+    padding-bottom: 0;
+    color:#1e1e1e;
+    font-weight: 600
+}
+.divider-sept li:last-child a{
+  border:none;
+}
+select,
+[type="search"]{
+  border: 1px solid #ced4da;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 7px 5px
+
+}
+.dataTables_wrapper .dataTables_filter input{
+  width: 300px;
+}
+.congs-custom a{
+ border:none;
+ padding:5px;
+color:#0056b3;
+}
+.congs-custom a .fas.fa-cog:after{
+  content:"\f0d7";
+   font-family: 'Font Awesome 5 Pro';
+   margin-left: 5px
+
+}
+.congs-custom a:hover{
+  text-decoration: none;
+  color:#7dc242;
+}
+.btn.btn-xs, .btn-group-xs > .btn{
+  padding:0.2rem 0.7rem;
+  font-size:12px;
+}
+
+.submenu .dropdown-toggle::after{
+  border: none;
+  content:'\f067';
+      font-family: 'Font Awesome 5 Pro';
+    font-weight: 900;
+    float: right;
+    margin-right: 10px;
+}
+.dropdown-toggle[aria-expanded="true"]:after {
+ 
+   content:'\f068';
+}
+/*for the animation*/
+.dropdown-toggle:after {
+  transition: 0.5s;
+}
+.submenu .submenu-inner{
+  background:#182631
+}
+
+/****** dashboard ***********/
+/******* common ********/
+.no-padding{
+  padding: 0 !important
+}
+.form-control{
+  border-right:none;
+  border-left:none;
+  border-top:none;
+}
+
+
+.login-screen.newregister_wrap {
+    text-align: center;
+    width: 100%;
+    display: table;
+}
+.login-screen.newregister_wrap .rgister_logo{ margin-bottom: 15px;     display: inline-block; }
+.login-screen.newregister_wrap .register_update {
+    margin: 0 auto;
+    max-width: 600px;
+    display: inherit;
+}
+.login-screen.newregister_wrap .register_update .btn{ background: #7dc242; color: #fff;  padding-left: 30px;
+    padding-right: 30px;}
+.login-screen.newregister_wrap .register_update .btn:hover{ background: #0056b3; border-color: #0056b3; }
+
+.login-screen.newregister_wrap .register_update .form-check {
+    position: relative;
+    display: block;
+        padding-left: 0;
+}
+.outer-login.newregister_container .form-group.form-row br {
+    display: none;
+}
+
+/******* common ********/
+@media (max-width: 1200px){
+.inner-content{
+  padding:50px 15px; 
+}
+ 
+.side-navbar{
+  width:300px;
+  left:-300px;
+}
+.page.active {
+   left:300px;
+ }
+.page {
+  width: 100%;
+ left:0px;
+    -webkit-transition: width 0.3s linear;
+    transition: width 0.3s linear;
+}
+.side-navbar.shrink{
+left:0px;
+width: 300px;
+}
+.center-nav li{margin-right: 10px;}
+}
+
+@media (max-width: 992px){
+  .newregister_container .login-screen.newregister_wrap {
+   
+    padding-top: 50px;
+}
+ 
+}
+@media only screen and (max-width: 767px){
+
+  .newregister_container{ width: 100%; padding: 0 15px; }
+  .newregister_container .center-h{ width: 100%;  }
+  .center-h{
+    position: static;
+    transform: inherit;
+  }
+  .login-screen .left-login,
+.login-screen .right-login{
+  display: block;
+  width: 100%;
+  padding: 0
+}
+  .login-screen .left-login:after{
+    position: static;
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-bottom: 20px;
+  }
+  .login-screen {
+    padding: 15px;
+    margin:20px;
+}
+.login-screen.newregister_wrap
+{ margin:  0;}
+
+.newregister_container .login-screen.newregister_wrap {
+   
+    padding-top: 15px;
+}
+}
+@media (min-width: 576px){
+.modal-dialog-lg.modal-dialog{
+max-width: 900px
+}
+}
